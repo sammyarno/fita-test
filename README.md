@@ -1,6 +1,6 @@
-# DailyPay Front End Engineering Challenge
+# Front End Engineering Challenge
 
-Welcome Candidate and thank you for taking the time to complete the DailyPay take-home challenge for our senior frontend engineer position
+Welcome Candidate and thank you for taking the time to complete the take-home challenge for our senior frontend engineer position
 
 You will have 2 days to complete the assignment. Once you have completed your solution, please reply with a link to a github repository and instructions on how to install / run the application
 
@@ -43,8 +43,6 @@ Here are the rules of this challenge.. you must:
   - Selected Nominee card: ![#009B86](https://via.placeholder.com/15/009B86/000000?text=+) `#009B86`
   - Nominee card background hover / submit button background hover: ![#34AC9C](https://via.placeholder.com/15/#34AC9C/000000?text=+) `#34AC9C`
 
-
-  Good luck and if you have questions, please reach out to us at rafael.freaner@dailypay.com
 
 ## Available Scripts
 
