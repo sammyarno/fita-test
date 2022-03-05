@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Ballot = () => {
   return (
     <div className='ballot'>
