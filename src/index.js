@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Containers/App';
 import reportWebVitals from './reportWebVitals';
+import './Styles/index.scss';
 
 ReactDOM.render(<App />,
   document.getElementById('root')

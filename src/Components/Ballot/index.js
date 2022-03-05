@@ -1,3 +1,5 @@
+import '../../Styles/ballot.scss';
+
 const Ballot = () => {
   return (
     <div className='ballot'>
