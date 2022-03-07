@@ -4,6 +4,8 @@ import App from './Containers/App';
 import reportWebVitals from './reportWebVitals';
 import './Styles/index.scss';
 
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
 ReactDOM.render(<App />,
   document.getElementById('root')
 );
