@@ -1,0 +1,104 @@
+@import './variables';
+
+.category {
+  position: relative;
+  box-shadow: 0 0 3px 0 $primary-light;
+  text-align: center;
+  padding: 1rem;
+  
+  &-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &:hover, &.active {
+    cursor: pointer;
+    box-shadow: 0 0 3px 3px $accent-light;
+    color: $accent;
+  }
+
+}
+
+.nominee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid $primary-light;
+  border-radius: .5rem;
+  padding: 1rem;
+  width: 18%;
+  margin-bottom: 2%;
+
+  &:hover, &.active {
+    background-color: $accent;
+    color: $primary-light;
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  &-image {
+    width: 10rem;
+    height: 15rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  &-container {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all .3s;
+
+    &.show {
+      padding: 2rem 0;
+      max-height: 30rem;
+      overflow: auto;
+      transition: all .3s;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+    &-wrapper {
+      margin-top: 3rem;
+    }
+  }
+
+  .nominee {
+    width: 200px;
+    height: 20rem;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &-image {
+      width: 8rem;
+      height: 12.5rem;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    &-container.show {
+      width: calc(100% + 2rem);
+      height: 23rem;
+      margin: 0 -1rem;
+      overflow-y: hidden;
+      flex-direction: column;
+      padding-bottom: 0;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

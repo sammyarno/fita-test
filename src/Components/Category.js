@@ -1,3 +1,5 @@
+import '../Styles/category.scss';
+
 const Category = ({ category, selected, nominees, onCategoryClick, onNomineeClick }) => {
   let nomineeSelected = (nominees.find(x => x.categoryId === category.id) || {}).nomineeId;
 

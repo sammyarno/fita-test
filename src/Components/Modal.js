@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../Styles/modal.scss';
 
 const Modal = ({ data, onClose }) => (
   <div className="modal">

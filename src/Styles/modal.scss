@@ -1,0 +1,43 @@
+@import './variables';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-content {
+    position: relative;
+    background: $primary-light;
+    color: black;
+    padding: 2rem;
+    width: 50%;
+    max-width: 650px;
+    border-radius: .25rem;
+
+    &_close {
+      cursor: pointer;
+      position: absolute;
+      top: .5rem;
+      right: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    &_title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &-content {
+      width: 80%;
+      height: auto
+    }
+  }
+}
