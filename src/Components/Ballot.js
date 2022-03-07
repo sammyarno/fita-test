@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import Modal from '../Modal';
-import Category from '../Category';
-import Loader from '../Loader';
-import Api from '../../Api';
-import '../../Styles/ballot.scss';
+import Modal from './Modal';
+import Category from './Category';
+import Loader from './Loader';
+import Api from '../Api';
+import '../Styles/ballot.scss';
 
 const Ballot = () => {
   const [data, setData] = useState([]);
@@ -13,6 +13,8 @@ const Ballot = () => {
 
   const fetchBallotData = useCallback(async () => {
     const res = await Api.getBallotData();
+    console.log(res);
+  
     setTimeout(
       () => {
         setData(res.items);
@@ -58,7 +60,7 @@ const Ballot = () => {
         <Loader />
       ) : (
         <div className="content-wrapper">
-          { data.map((cat) => <Category category={cat} selected={selectedCategory === cat.id} nominees={selectedNominees} onCategoryClick={handleCategoryClick} onNomineeClick={handleSelectedNominee} />) }
+          { data.map((cat) => <Category key={cat.id} category={cat} selected={selectedCategory === cat.id} nominees={selectedNominees} onCategoryClick={handleCategoryClick} onNomineeClick={handleSelectedNominee} />) }
           <button type="button" className="btn submit-btn" onClick={handleSubmitClick}>SUBMIT</button>
         </div>
       )}

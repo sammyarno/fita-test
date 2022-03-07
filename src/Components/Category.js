@@ -7,10 +7,12 @@ const Category = ({ category, selected, nominees, onCategoryClick, onNomineeClic
     <div
       key={category.id}
       className="category-container"
+      data-testid="categoryItem"
     >
       <div 
         className={`category${selected ? ' active' : ''}`} 
         onClick={() => onCategoryClick(category.id)}
+        data-testid="categoryItemToggle"
       >
         <h3>{category.title}</h3>
       </div>
@@ -21,6 +23,7 @@ const Category = ({ category, selected, nominees, onCategoryClick, onNomineeClic
             <div 
               key={nominee.id} 
               className={`nominee${nomineeSelected === nominee.id ? ' active' : ''}`}
+              data-testid="nomineeItem"
             >
               <h4 className="nominee-title">{nominee.title}</h4>
               <img className="nominee-image" src={nominee.photoUrL} alt="logo" />
